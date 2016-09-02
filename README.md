@@ -5,7 +5,7 @@ Description: Simple iOS Audible Clone App
 
 ## Demo
 
-[![Demo Doccou alpha](https://github.com/mihailsalari/iOS-Extensions/blob/master/Screen.png)](https://www.youtube.com/channel/UC1HkMAYQoaT3g-RQEkOWG8g)
+[![Demo Doccou alpha](https://github.com/mihailsalari/Audible/blob/master/Audible/Assets.xcassets/page1.imageset/page1%402x.jpg)](https://www.youtube.com/channel/UC1HkMAYQoaT3g-RQEkOWG8g)
 
 ## Support
 
