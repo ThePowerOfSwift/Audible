@@ -15,7 +15,9 @@
 		4899F5011D79F0FC0067B025 /* PageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4899F5001D79F0FC0067B025 /* PageCollectionViewCell.swift */; };
 		4899F5041D79F2CF0067B025 /* UIKit Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4899F5031D79F2CF0067B025 /* UIKit Extensions.swift */; };
 		4899F5071D79F4410067B025 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4899F5051D79F4410067B025 /* AppDelegate.swift */; };
-		4899F50D1D79F4760067B025 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4899F50C1D79F4760067B025 /* ViewController.swift */; };
+		4899F50D1D79F4760067B025 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4899F50C1D79F4760067B025 /* MainViewController.swift */; };
+		48B75BA81D94526D004A4937 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B75BA71D94526D004A4937 /* Page.swift */; };
+		48B75BAA1D9455D0004A4937 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B75BA91D9455D0004A4937 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +52,9 @@
 		4899F5031D79F2CF0067B025 /* UIKit Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIKit Extensions.swift"; path = "Util/UIKit Extensions.swift"; sourceTree = "<group>"; };
 		4899F5051D79F4410067B025 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "Supporting Files/AppDelegate.swift"; sourceTree = "<group>"; };
 		4899F5061D79F4410067B025 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/Info.plist"; sourceTree = "<group>"; };
-		4899F50C1D79F4760067B025 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ViewController/ViewController.swift; sourceTree = "<group>"; };
+		4899F50C1D79F4760067B025 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ViewController/MainViewController.swift; sourceTree = "<group>"; };
+		48B75BA71D94526D004A4937 /* Page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Page.swift; path = Model/Page.swift; sourceTree = "<group>"; };
+		48B75BA91D9455D0004A4937 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Util/Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 		4899F4D11D79EC850067B025 /* Audible */ = {
 			isa = PBXGroup;
 			children = (
+				48B75BA61D94525C004A4937 /* Model */,
 				4899F5091D79F44F0067B025 /* Util */,
 				4899F50B1D79F45A0067B025 /* View */,
 				4899F50A1D79F4540067B025 /* ViewController */,
@@ -143,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				4899F5031D79F2CF0067B025 /* UIKit Extensions.swift */,
+				48B75BA91D9455D0004A4937 /* Constants.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -150,7 +156,7 @@
 		4899F50A1D79F4540067B025 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				4899F50C1D79F4760067B025 /* ViewController.swift */,
+				4899F50C1D79F4760067B025 /* MainViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -161,6 +167,14 @@
 				4899F5001D79F0FC0067B025 /* PageCollectionViewCell.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		48B75BA61D94525C004A4937 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				48B75BA71D94526D004A4937 /* Page.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,8 +316,10 @@
 			files = (
 				4899F5071D79F4410067B025 /* AppDelegate.swift in Sources */,
 				4899F5011D79F0FC0067B025 /* PageCollectionViewCell.swift in Sources */,
-				4899F50D1D79F4760067B025 /* ViewController.swift in Sources */,
+				4899F50D1D79F4760067B025 /* MainViewController.swift in Sources */,
 				4899F5041D79F2CF0067B025 /* UIKit Extensions.swift in Sources */,
+				48B75BA81D94526D004A4937 /* Page.swift in Sources */,
+				48B75BAA1D9455D0004A4937 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +473,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = U82TG7992X;
 				INFOPLIST_FILE = "$(SRCROOT)/Audible/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mihailsalari.Audible;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -470,6 +487,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = U82TG7992X;
 				INFOPLIST_FILE = "$(SRCROOT)/Audible/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mihailsalari.Audible;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -554,6 +572,7 @@
 				4899F4F91D79EC850067B025 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4899F4FA1D79EC850067B025 /* Build configuration list for PBXNativeTarget "AudibleTests" */ = {
 			isa = XCConfigurationList;
@@ -562,6 +581,7 @@
 				4899F4FC1D79EC850067B025 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4899F4FD1D79EC850067B025 /* Build configuration list for PBXNativeTarget "AudibleUITests" */ = {
 			isa = XCConfigurationList;
@@ -570,6 +590,7 @@
 				4899F4FF1D79EC850067B025 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
